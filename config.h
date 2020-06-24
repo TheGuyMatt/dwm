@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 #include <X11/XF86keysym.h>
-#include "/home/matt/.cache/wal/colors-wal-dwm.h"
+//#include "/home/matt/.cache/wal/colors-wal-dwm.h"
+#include "wal-colors.h"
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
