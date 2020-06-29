@@ -9,5 +9,5 @@ My build of the [suckless](https://dwm.suckless.org) dynamic window manager
 * Reads from `pywal`
 * Urgent Borders
 * Actual fullscreen with `super+shift+f`
-* Full gaps patch
 * Swallow patch: programs that make terminal inoperable take the terminal's place
+* vanitygaps: gaps for all layouts + smart gaps
