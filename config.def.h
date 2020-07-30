@@ -45,7 +45,7 @@ static const Rule rules[] = {
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "Alacritty", NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ "st", NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
@@ -77,7 +77,7 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 //rofi -show run -eh 2 -fullscreen -theme "~/.cache/wal/colors-rofi-dark.rasi" -font "Hack Nerd Font 18"
 static const char *dmenucmd[] = { "rofi", "-show", "run", "-eh", "2", "-fullscreen", "-theme", "~/.cache/wal/colors-rofi-dark.rasi", "-font", "Hack Nerd Font 18", NULL };
 //static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *lockscreen[]  = { "betterlockscreen", "-l", "blur", NULL };
 
 //brightness functions
