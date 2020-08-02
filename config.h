@@ -18,11 +18,16 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Hack Nerd Font:size=9" };
 static const char dmenufont[]       = "Hack Nerd Font:size=9";
 
-static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#005577";
+//static const char col_gray1[]       = "#222222";
+//static const char col_gray2[]       = "#444444";
+//static const char col_gray3[]       = "#bbbbbb";
+//static const char col_gray4[]       = "#eeeeee";
+static const char col_gray1[]       = "#444444";
+static const char col_gray2[]       = "#bbbbbb";
+static const char col_gray3[]       = "#eeeeee";
+static const char col_gray4[]       = "#ffffff";
+//static const char col_cyan[]        = "#005577";
+static const char col_cyan[]        = "#b30000";
 static const char col_red[]         = "#FF0000";
 static const char col_urg[]         = "#FF0000";
 static const char col_urg_fg[]      = "#FFFFFF";
@@ -45,7 +50,7 @@ static const Rule rules[] = {
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
-	{ "st", NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ "st",        NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 };
 
