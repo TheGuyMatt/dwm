@@ -22,7 +22,7 @@ static const char dmenufont[]       = "Hack Nerd Font:size=9";
 //static const char col_gray2[]       = "#444444";
 //static const char col_gray3[]       = "#bbbbbb";
 //static const char col_gray4[]       = "#eeeeee";
-static const char col_gray1[]       = "#444444";
+static const char col_gray1[]       = "#000000";
 static const char col_gray2[]       = "#bbbbbb";
 static const char col_gray3[]       = "#eeeeee";
 static const char col_gray4[]       = "#ffffff";
@@ -34,7 +34,7 @@ static const char col_urg_fg[]      = "#FFFFFF";
 static const char col_urg_border[]  = "#FF00FF";
 static const char *colors[][3]      = {
   /*[>               fg          bg         border  <]*/
-  [SchemeNorm] = { col_gray3,  col_gray1, col_cyan       },
+  [SchemeNorm] = { col_gray3,  col_gray1, "#005577"      },
   [SchemeSel]  = { col_gray4,  col_cyan,  col_red        },
   [SchemeUrg] =  { col_urg_fg, col_urg,   col_urg_border },
 };
