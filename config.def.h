@@ -15,28 +15,25 @@ static const int smartgaps          = 0;        /* 1 means no outer gap when the
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack Nerd Font:size=9" };
-static const char dmenufont[]       = "Hack Nerd Font:size=9";
+static const char *fonts[]          = { "Hack Nerd Font:size=12" };
+static const char dmenufont[]       = "Hack Nerd Font:size=12";
 
-//static const char col_gray1[]       = "#222222";
-//static const char col_gray2[]       = "#444444";
-//static const char col_gray3[]       = "#bbbbbb";
-//static const char col_gray4[]       = "#eeeeee";
-static const char col_gray1[]       = "#000000";
-static const char col_gray2[]       = "#bbbbbb";
-static const char col_gray3[]       = "#eeeeee";
-static const char col_gray4[]       = "#ffffff";
-//static const char col_cyan[]        = "#005577";
-static const char col_cyan[]        = "#b30000";
-static const char col_red[]         = "#FF0000";
-static const char col_urg[]         = "#FF0000";
-static const char col_urg_fg[]      = "#FFFFFF";
-static const char col_urg_border[]  = "#FF00FF";
+/* gruvbox colors */
+static const char col_norm_fg[]     = "#fbf1c7";
+static const char col_norm_bg[]     = "#282828";
+static const char col_norm_border[] = "#282828";
+static const char col_sel_fg[]      = "#fbf1c7";
+static const char col_sel_bg[]      = "#98971a";
+static const char col_sel_border[]  = "#98971a";
+static const char col_urg_fg[]      = "#fe8019";
+static const char col_urg_bg[]      = "#d65d0e";
+static const char col_urg_border[]  = "#fe8019";
+
 static const char *colors[][3]      = {
-  /*[>               fg          bg         border  <]*/
-  [SchemeNorm] = { col_gray3,  col_gray1, "#005577"      },
-  [SchemeSel]  = { col_gray4,  col_cyan,  col_red        },
-  [SchemeUrg] =  { col_urg_fg, col_urg,   col_urg_border },
+  /*[>             fg           bg           border  <]*/
+  [SchemeNorm] = { col_norm_fg, col_norm_bg, col_norm_border },
+  [SchemeSel]  = { col_sel_fg,  col_sel_bg,  col_sel_border },
+  [SchemeUrg] =  { col_urg_fg,  col_urg_bg,     col_urg_border },
 };
 
 /* tagging */
@@ -48,7 +45,7 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class       instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
-	{ "Gimp",      NULL,     NULL,           0,         1,          0,           0,        -1 },
+	{ "Gimp",      NULL,     NULL,           0,         0,          0,           0,        -1 },
 	{ "Firefox",   NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st",        NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,        NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
@@ -79,7 +76,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
 
 //rofi launching commands
 //rofi -show run -eh 2 -fullscreen -theme "~/.cache/wal/colors-rofi-dark.rasi" -font "Hack Nerd Font 18"
