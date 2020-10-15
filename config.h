@@ -75,12 +75,13 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 /* commands */
-static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
+//dmenu launching commands
+static char dmenumon[2] = "0"; //[> component of dmenucmd, manipulated in spawn() <]
+//static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
 
 //rofi launching commands
-//rofi -show run -eh 2 -fullscreen -theme "~/.cache/wal/colors-rofi-dark.rasi" -font "Hack Nerd Font 18"
-//static const char *dmenucmd[] = { "rofi", "-show", "run", "-eh", "2", "-fullscreen", "-theme", "~/.cache/wal/colors-rofi-dark.rasi", "-font", "Hack Nerd Font 18", NULL };
+//rofi -show run -eh 2 -theme "gruvbox-dark.rasi" -font "Hack Nerd Font 18"
+static const char *dmenucmd[] = { "rofi", "-show", "run", "-eh", "2", "-theme", "gruvbox-dark.rasi", "-font", "Hack Nerd Font 18", NULL };
 
 static const char *termcmd[]  = { "st", NULL };
 static const char *lockscreen[]  = { "betterlockscreen", "-l", "blur", NULL };
