@@ -19,15 +19,26 @@ static const char *fonts[]          = { "Hack Nerd Font:size=12" };
 static const char dmenufont[]       = "Hack Nerd Font:size=12";
 
 /* gruvbox colors */
-static const char col_norm_fg[]     = "#fbf1c7";
-static const char col_norm_bg[]     = "#282828";
-static const char col_norm_border[] = "#282828";
-static const char col_sel_fg[]      = "#fbf1c7";
-static const char col_sel_bg[]      = "#98971a";
-static const char col_sel_border[]  = "#98971a";
-static const char col_urg_fg[]      = "#fe8019";
-static const char col_urg_bg[]      = "#d65d0e";
-static const char col_urg_border[]  = "#fe8019";
+//static const char col_norm_fg[]     = "#fbf1c7";
+//static const char col_norm_bg[]     = "#282828";
+//static const char col_norm_border[] = "#282828";
+//static const char col_sel_fg[]      = "#fbf1c7";
+//static const char col_sel_bg[]      = "#98971a";
+//static const char col_sel_border[]  = "#98971a";
+//static const char col_urg_fg[]      = "#fe8019";
+//static const char col_urg_bg[]      = "#d65d0e";
+//static const char col_urg_border[]  = "#fe8019";
+
+/* baskerville colors */
+static const char col_norm_fg[]     = "#ffffff";
+static const char col_norm_bg[]     = "#000000";
+static const char col_norm_border[] = "#000000";
+static const char col_sel_fg[]      = "#ffffff";
+static const char col_sel_bg[]      = "#e10023";
+static const char col_sel_border[]  = "#e10023";
+static const char col_urg_fg[]      = "#ffffff";
+static const char col_urg_bg[]      = "#ff8781";
+static const char col_urg_border[]  = "#ff8781";
 
 static const char *colors[][3]      = {
   /*[>             fg           bg           border  <]*/
